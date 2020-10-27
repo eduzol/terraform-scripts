@@ -30,12 +30,17 @@ terraform refresh
 ```
 Runs automatically when running terraform plan 
 
+Used to see the contents of tfstate files:
+```
+terraform show
+```
+
 ## Terraform Notes
 
 ### Providers
 - Terraform supports multiple providers.
 - We have to specify the provider details for which we want to launch the infrastructure for.
-- With provider, we also need to add authentication
+- With each provider, we also need to add authentication
 - Terraform init will download plugins associated with the provider
 
 ### Resources
@@ -43,7 +48,7 @@ Runs automatically when running terraform plan
 
 ### Desired State and Current State
 
-Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
+`Desired State`. The state of a resource as specified in its terraform definition.
+`Current State`. The state of a resource as its currently in real world.
 
 Every time we create a Terraform plan, Terraform will try to converge the current state into the desired state
-
