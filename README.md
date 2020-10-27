@@ -2,20 +2,27 @@
 
 ## Important commands
 
-Used to initialize project 
+Used to initialize project :
 ```
 terraform init
 ```
 
-Used to generate project plan
+Used to generate project plan :
 ```
 terraform plan
 ```
 
-User to apply project plan
+Used to apply project plan :
 ```
 terraform apply
 ```
+
+Used to destroy a specific resource
+```
+terraform destroy -target {resource.name}
+```
+a specific resource can be referenced as `resource.name` 
+If a resource block is commented out the resource will be destroyed as well.
 
 
 ## Terraform Notes
