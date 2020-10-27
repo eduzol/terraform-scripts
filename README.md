@@ -21,9 +21,14 @@ Used to destroy a specific resource
 ```
 terraform destroy -target {resource.name}
 ```
-a specific resource can be referenced as `resource.name` 
+A specific resource can be referenced as `resource.name` 
 If a resource block is commented out the resource will be destroyed as well.
 
+Used to get latest state of real infrastructure into Terraform state file 
+```
+terraform refresh
+```
+Runs automatically when running terraform plan 
 
 ## Terraform Notes
 
@@ -35,3 +40,10 @@ If a resource block is commented out the resource will be destroyed as well.
 
 ### Resources
 - Resources are references to the individual services which the provider has to offer
+
+### Desired State and Current State
+
+Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
+
+Every time we create a Terraform plan, Terraform will try to converge the current state into the desired state
+
