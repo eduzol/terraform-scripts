@@ -51,4 +51,13 @@ terraform show
 `Desired State`. The state of a resource as specified in its terraform definition.
 `Current State`. The state of a resource as its currently in real world.
 
-Every time we create a Terraform plan, Terraform will try to converge the current state into the desired state
+Every time we create a Terraform plan, Terraform will try to converge the current state into the desired state.
+
+## Attributes And Output values
+
+`Output values` are like the return values of a Terraform module, and have several uses:
+ - Expose a subset of its resources attributes to a parent module
+ - Print values to CLI
+ 
+`Attributes` are a named piece of data that belongs to some kind of object
+   
