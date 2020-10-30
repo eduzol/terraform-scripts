@@ -60,4 +60,12 @@ Every time we create a Terraform plan, Terraform will try to converge the curren
  - Print values to CLI
  
 `Attributes` are a named piece of data that belongs to some kind of object
-   
+
+## Variables
+
+`Variable` this is a way to reuse values across a terraform project. Values can be assigned in multiple ways: 
+- Environment variables
+- Command line flags
+- From a file (`terraform.tfvars`)
+- variable defaults
+
