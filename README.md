@@ -69,3 +69,7 @@ Every time we create a Terraform plan, Terraform will try to converge the curren
 - From a file (`terraform.tfvars`)
 - variable defaults
 
+Following types have been identified: 
+- `string`
+- `number`
+- `list`
