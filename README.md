@@ -76,4 +76,29 @@ Following types have been identified:
 
 `count` object can be used to create multiple resources without having to repeat the code. 
 With `count.index` we can add specific tags or names per each of the resources created.
- 
+
+## Conditional expressions
+
+A conditional expression uses the value of a bool expression to select one of two values.
+
+The syntax of a conditional expression is as follows:
+```
+condition ? true_val : false_val
+```
+
+## Local values
+
+Local values can be helpful to avoid repeating the same values or expressions multiple times in a configuration. 
+
+If overused they can also make the configuration hard to read (recommended to use in moderation)
+
+Example: 
+```
+locals {
+  # Common tags to be assigned to all resources
+  common_tags = {
+    Service = local.service_name
+    Owner   = local.owner
+  }
+}
+```
