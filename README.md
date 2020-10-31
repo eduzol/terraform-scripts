@@ -73,3 +73,7 @@ Following types have been identified:
 - `string`
 - `number`
 - `list`
+
+`count` object can be used to create multiple resources without having to repeat the code. 
+With `count.index` we can add specific tags or names per each of the resources created.
+ 
