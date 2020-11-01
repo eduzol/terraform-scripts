@@ -102,3 +102,23 @@ locals {
   }
 }
 ```
+
+## Datasources
+
+Data sources allow data to be fetched or computed for use elsewhere in Terraform configuration. Use of data sources 
+allows a Terraform configuration to make use of information defined outside of Terraform
+
+Example:
+```
+data "aws_ami" "ecs_ami" {
+  most_recent = true
+  owners = [
+    "amazon"]
+
+  filter {
+    name = "name"
+    values = [
+      "amzn2-ami-hvm*"]
+  }
+}
+```
