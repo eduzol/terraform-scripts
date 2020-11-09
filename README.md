@@ -149,7 +149,7 @@ resource "aws_security_group" "dynamicsg" {
 ## Provisioners
 
 Provisioners execute scripts on a local or remote machine as part of resource creation or destruction.
-For instance, a provisioner can install a web server after creating a EC2 instance: 
+For instance, a remote provisioner can install a web server after creating a EC2 instance: 
 
 ```
 resource "aws_instance" "myec2" {
@@ -172,3 +172,15 @@ resource "aws_instance" "myec2" {
    }
 }
 ```
+
+### Local-exec provisioners
+
+`local-exec` provisioners invoke a local (local to the terraform machine) executable after the resource creation.
+
+**This invokes a process on the machine running Terraform, not on the resource.**
+
+One of the most used approach of local-exec is to run ansible playbooks on the created server, after resource creation.
+
+### Remote-exec provisioners
+
+`remote-exec` provisioners invoke a script on a remote resource after it is created. 
