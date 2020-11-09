@@ -184,3 +184,20 @@ One of the most used approach of local-exec is to run ansible playbooks on the c
 ### Remote-exec provisioners
 
 `remote-exec` provisioners invoke a script on a remote resource after it is created. 
+
+## Modules
+
+A module is a container for multiple resources that can be used together. 
+Modules are called using the `module` blocks: 
+
+```
+module "ec2module" {
+  source = "../../modules/ec2"
+  instance_type = "t2.micro"
+}
+```
+
+## Workspaces
+
+Terraform allows us to have multiple workspaces, 
+with each of the workspaces we can have a different set of environment variables associated.
